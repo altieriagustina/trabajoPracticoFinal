@@ -1,0 +1,110 @@
+body {
+    background-color: #ffeee3;
+}
+
+#container {
+    margin: 2%;
+    border-radius: 1%;
+    padding: 3%;
+    border: solid 2px #e73992;
+    box-shadow: 5px 5px 5px #fea6cb;
+}
+
+#frutos-secos {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2%;
+    padding: 1%;
+    justify-content: space-around;
+}
+
+.article {
+    width: 200px;
+    height: auto;
+    margin: 2%;
+    padding: 3%;
+    border: solid 2px #e73992;
+    border-radius: 3%;
+    box-shadow: 5px 5px 5px #fea6cb;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.description {
+    text-align: justify;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h3 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.btnAddToCart {
+    border: none;
+    border-radius: 8px;
+    padding: 5% 10%;
+    margin: 10%;
+    box-shadow: 2px 2px 2px #fea6cb;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+.btnAddToCart:hover {
+    background-color: #e73992;
+    color: #ffeee3;
+}
+
+
+.totalText {
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: space-around;
+    margin: 5%;
+    padding: 3%;
+    border: solid 2px #ff6db8;
+    box-shadow: 5px 5px 5px #fea6cb;
+    border-radius: 8px;
+}
+
+input {
+    border: none;
+    border-radius: 8px;
+    padding: 3%;
+    margin: 2%;
+    background-color: white;
+    box-shadow: 2px 2px 2px #fea6cb;
+}
+
+.logo-semina {
+    width: 25%;
+    height: auto;
+    margin: 2%;
+    padding: 1%;
+}
+
+.barra-navegacion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffeee3;
+    margin: 2%;
+}
+
+.menu {
+    width: 50%;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+
+.menu-item:hover {
+    background-color: #e73992;
+    color: #ffeee3;
+    border-radius: 10%;
+    padding: 2% 5%;
+}
