@@ -1,13 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+/* Variables para colores */
+
+:root {
+    --main-bg-color: #ffeee3;
+    --border-bgh-color: #e73992;
+    --shadow-color: #fea6cb;
+}
+
 body {
-    background-color: #ffeee3;
+    background-color: var(--main-bg-color);
 }
 
 #container {
     margin: 2%;
     border-radius: 1%;
     padding: 3%;
-    border: solid 2px #e73992;
-    box-shadow: 5px 5px 5px #fea6cb;
+    border: solid 2px var(--border-bgh-color);
+    box-shadow: 5px 5px 5px var(--shadow-color);
 }
 
 #frutos-secos {
@@ -23,14 +34,19 @@ body {
     height: auto;
     margin: 2%;
     padding: 3%;
-    border: solid 2px #e73992;
-    border-radius: 3%;
-    box-shadow: 5px 5px 5px #fea6cb;
+    border: solid 2px var(--border-bgh-color);
+    border-radius: 2%;
+    box-shadow: 5px 5px 5px var(--shadow-color);
 }
 
 img {
     max-width: 100%;
     height: auto;
+}
+
+.title {
+    font-family: "PT Serif", serif;
+
 }
 
 .description {
@@ -39,7 +55,9 @@ img {
 }
 
 h3 {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "PT Serif", serif;
+    text-align: justify;
+    font-weight: 200;
 }
 
 .btnAddToCart {
@@ -47,26 +65,43 @@ h3 {
     border-radius: 8px;
     padding: 5% 10%;
     margin: 10%;
-    box-shadow: 2px 2px 2px #fea6cb;
+    box-shadow: 2px 2px 2px var(--shadow-color);
     cursor: pointer;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
 }
 
-.btnAddToCart:hover {
-    background-color: #e73992;
-    color: #ffeee3;
+.btnAddToCart:hover, .btnPay:hover  {
+    background-color: var(--border-bgh-color);
+    color: var(--main-bg-color);
 }
 
-
 .totalText {
-    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
     justify-content: space-around;
+    align-items: center;
+    font-family: "PT Serif", serif;
     margin: 5%;
     padding: 3%;
-    border: solid 2px #ff6db8;
-    box-shadow: 5px 5px 5px #fea6cb;
+    border: solid 2px var(--border-bgh-color);
+    box-shadow: 5px 5px 5px var(--shadow-color);
     border-radius: 8px;
+}
+
+.icon-cart {
+    width: 50px;
+    margin: 3%;
+}
+
+.btnPay {
+    border: none;
+    border-radius: 8px;
+    padding: 5% 10%;
+    margin: 10%;
+    box-shadow: 2px 2px 2px var(--shadow-color);
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
 }
 
 input {
@@ -74,37 +109,62 @@ input {
     border-radius: 8px;
     padding: 3%;
     margin: 2%;
-    background-color: white;
-    box-shadow: 2px 2px 2px #fea6cb;
+    box-shadow: 2px 2px 2px var(--shadow-color);
+}
+
+.stock {
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
 .logo-semina {
-    width: 25%;
+    width: 20%;
     height: auto;
     margin: 2%;
     padding: 1%;
 }
 
-.barra-navegacion {
+.nav-bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #ffeee3;
+    background-color: var(--main-bg-color);
     margin: 2%;
 }
 
 .menu {
+    width: 70%;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    font-family: "PT Serif", serif;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.menu-item {
+    margin: 5%;
+    outline: none;
+    text-decoration: none;
     width: 50%;
     list-style-type: none;
     display: flex;
     justify-content: space-around;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 18px;
+    font-family: "PT Serif", serif;
+    font-size: 20px;
+    color: black;
+    cursor: pointer;
+    border-radius: 5%;
 }
 
 .menu-item:hover {
-    background-color: #e73992;
-    color: #ffeee3;
-    border-radius: 10%;
-    padding: 2% 5%;
+    background-color: var(--border-bgh-color);
+    color: var(--main-bg-color);
+    padding: 2% 3%;
+}
+
+.footer-copyright {
+    margin: 3%;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
 }

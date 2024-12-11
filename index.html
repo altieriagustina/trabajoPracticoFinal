@@ -9,20 +9,26 @@
 </head>
 
 <body>
-    <div class="barra-navegacion">
+    <div class="nav-bar">
         <img class="logo-semina" src="./IMAGES/logoSemina.png" alt="Logo de Semina">
         <ul class="menu">
-            <li class="menu-item">Inicio</li>
-            <li class="menu-item">Quienes somos</li>
-            <li class="menu-item">Contacto</li>
+            <a class="menu-item" href="index.html"><li>Inicio</li></a>
+            <a class="menu-item" href="./HTML/quienesSomos.html"><li>Quienes somos</li></a>
+            <a class="menu-item" href="#"><li>Contacto</li></a>
         </ul>
     </div>
     <div id="container">
         <div id="frutos-secos">
 
         </div>
-    <h2 id="totalText" class="totalText">Total de su carrito: $0</h2>
+        <div class="totalText">
+            <img class="icon-cart" src="./IMAGES/icon-cart.svg" alt="Icono carrito de compras">
+            <h2 id="totalText">Total de su carrito: $0</h2>
+            <button class="btnPay" id="btnPay">Finalizar compra</button>
+        </div>
     </div>
+    <div class="footer-copyright">
+        © Agustina Altieri - Todos los derechos reservados</div>
     <script src="JS/main.js"></script>
 </body>
 
