@@ -1,6 +1,11 @@
-let articulos = document.getElementById("frutos-secos")
-let totalText = document.getElementById("totalText")
-let btnPay = document.getElementById("btnPay")
+/* VAriables a utilizar */
+
+let articulos = document.getElementById("frutos-secos");
+let totalText = document.getElementById("totalText");
+let btnPay = document.getElementById("btnPay");
+let total = 0;
+
+/* Arreglo con información para las tags */
 
 const articles = [
     {
@@ -14,11 +19,13 @@ const articles = [
     },
 ]
 
+/* Función para agregar los ítems al HTML */
+
 function pintarArticulos(arrayProductos) {
     for (let i = 0; i < arrayProductos.length; i++) {
         articulos.innerHTML += `
             <div class="article">
-                <img src="${articles[i].path_img}" alt="Imagen de Fruto Seco">
+                <img class="img-article" src="${articles[i].path_img}" alt="Imagen de Fruto Seco">
                 <h3 class="title">${articles[i].producto}</h3>
                 <p class="description">${articles[i].descripcion} </p>
                 <h4 class="precio">Precio por 100gr: $ ${articles[i].precio} </h4>
@@ -36,7 +43,7 @@ function pintarArticulos(arrayProductos) {
     }
 }
 
-let total = 0;
+/* Funcíon que maneja el evento de btnAddToCart */
 
 function comprar(index) {
     const stockElement = document.getElementById(`stock${index}`);
@@ -55,10 +62,18 @@ function comprar(index) {
     }
 }
 
+/* Llamado de la función */
+
 pintarArticulos(articles)
+
+/* Función btn finalizar compra con validaciones y alertas */
 
 btnPay.addEventListener("click", finalizarCompra);
 
-function finalizarCompra () {
-    alert(`Compra finalizada con éxito, será redirigido a la plataforma de pago.`)
+function finalizarCompra() {
+    if (total <= 0) {
+        alert(`Su carrito está vacío.`)
+    } else {
+        alert(`Compra finalizada con éxito, será redirigido a la plataforma de pago.`)
+    }
 }

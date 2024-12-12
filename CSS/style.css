@@ -1,5 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+/*Fuentes importadas */
 
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 /* Variables para colores */
 
@@ -9,112 +10,20 @@
     --shadow-color: #fea6cb;
 }
 
+/* Color para fondo de toda la página */
+
 body {
     background-color: var(--main-bg-color);
 }
 
-#container {
-    margin: 2%;
-    border-radius: 1%;
-    padding: 3%;
-    border: solid 2px var(--border-bgh-color);
-    box-shadow: 5px 5px 5px var(--shadow-color);
-}
+/* Estilo del header */
 
-#frutos-secos {
+.header-nav-bar {
     display: flex;
-    flex-wrap: wrap;
-    margin: 2%;
-    padding: 1%;
-    justify-content: space-around;
-}
-
-.article {
-    width: 200px;
-    height: auto;
-    margin: 2%;
-    padding: 3%;
-    border: solid 2px var(--border-bgh-color);
-    border-radius: 2%;
-    box-shadow: 5px 5px 5px var(--shadow-color);
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-.title {
-    font-family: "PT Serif", serif;
-
-}
-
-.description {
-    text-align: justify;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-h3 {
-    font-family: "PT Serif", serif;
-    text-align: justify;
-    font-weight: 200;
-}
-
-.btnAddToCart {
-    border: none;
-    border-radius: 8px;
-    padding: 5% 10%;
-    margin: 10%;
-    box-shadow: 2px 2px 2px var(--shadow-color);
-    cursor: pointer;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
-}
-
-.btnAddToCart:hover, .btnPay:hover  {
-    background-color: var(--border-bgh-color);
-    color: var(--main-bg-color);
-}
-
-.totalText {
-    display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    font-family: "PT Serif", serif;
-    margin: 5%;
-    padding: 3%;
-    border: solid 2px var(--border-bgh-color);
-    box-shadow: 5px 5px 5px var(--shadow-color);
-    border-radius: 8px;
-}
-
-.icon-cart {
-    width: 50px;
-    margin: 3%;
-}
-
-.btnPay {
-    border: none;
-    border-radius: 8px;
-    padding: 3%;
-    margin: 3%;
-    box-shadow: 2px 2px 2px var(--shadow-color);
-    cursor: pointer;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
-}
-
-input {
-    border: none;
-    border-radius: 8px;
-    padding: 3%;
+    background-color: var(--main-bg-color);
     margin: 2%;
-    box-shadow: 2px 2px 2px var(--shadow-color);
-}
-
-.stock {
-    margin-bottom: 0;
-    padding-bottom: 0;
 }
 
 .logo-semina {
@@ -122,14 +31,6 @@ input {
     height: auto;
     margin: 2%;
     padding: 1%;
-}
-
-.nav-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--main-bg-color);
-    margin: 2%;
 }
 
 .menu {
@@ -161,6 +62,124 @@ input {
 .menu-item:hover {
     background-color: var(--border-bgh-color);
     color: var(--main-bg-color);
+}
+
+/* Estilo del conteiner ppal */
+
+.container {
+    margin: 2%;
+    border-radius: 1%;
+    padding: 3%;
+    border: solid 2px var(--border-bgh-color);
+    box-shadow: 5px 5px 5px var(--shadow-color);
+}
+
+/* Estilo para acomodar las tags */
+
+.seccion-frutos-secos {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2%;
+    padding: 1%;
+    justify-content: space-around;
+}
+
+.article {
+    width: 200px;
+    height: auto;
+    margin: 2%;
+    padding: 3%;
+    border: solid 2px var(--border-bgh-color);
+    border-radius: 2%;
+    box-shadow: 5px 5px 5px var(--shadow-color);
+}
+
+.img-article {
+    max-width: 100%;
+    height: auto;
+}
+
+.title {
+    font-family: "PT Serif", serif;
+    font-weight: bold;
+}
+
+.description {
+    text-align: justify;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Estilo de los dos inputs (no les puse clases) */
+
+input {
+    border: none;
+    border-radius: 8px;
+    padding: 3%;
+    margin: 2%;
+    box-shadow: 2px 2px 2px var(--shadow-color);
+}
+
+/* Posicionamiento del <p> sobre el input */
+
+.stock {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+/* Estilo del botón */
+
+.btnAddToCart {
+    border: none;
+    border-radius: 8px;
+    padding: 5% 10%;
+    margin: 10%;
+    box-shadow: 2px 2px 2px var(--shadow-color);
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+.btnAddToCart:hover, .btnPay:hover  {
+    background-color: var(--border-bgh-color);
+    color: var(--main-bg-color);
+}
+
+/* Estilo para el <div> que contiene el total y btn finalizar compra */
+
+.totalText {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: "PT Serif", serif;
+    margin: 5%;
+    padding: 3%;
+    border: solid 2px var(--border-bgh-color);
+    box-shadow: 5px 5px 5px var(--shadow-color);
+    border-radius: 8px;
+}
+
+.icon-cart {
+    width: 50px;
+    margin: 3%;
+}
+
+.btnPay {
+    border: none;
+    border-radius: 8px;
+    padding: 3%;
+    margin: 3%;
+    box-shadow: 2px 2px 2px var(--shadow-color);
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+/* Estilo sección `Quienes somos` y footer de pag */
+
+.quienes-somos {
+    font-family: "PT Serif", serif;
+    text-align: justify;
+    font-weight: 200;
 }
 
 .footer-copyright {
